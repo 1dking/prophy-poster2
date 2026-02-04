@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Sparkles, Share2, Download, Instagram, Smartphone, Loader2, Type, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const App = () => {
-  const [imageUrl, setImageUrl] = useState(null);
+const [imageUrl, setImageUrl] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [aspectRatio, setAspectRatio] = useState('portrait'); // 'portrait' (4:5) or 'story' (9:16)
+  const [aspectRatio, setAspectRatio] = useState<'portrait' | 'story'>('portrait'); // 'portrait' (4:5) or 'story' (9:16)
 
   // Sizes Configuration
   const sizes = {
@@ -81,7 +81,7 @@ const App = () => {
               {Object.entries(sizes).map(([key, value]) => (
                 <button
                   key={key}
-                  onClick={() => setAspectRatio(key)}
+                  onClick={() => setAspectRatio(key as 'portrait' | 'story')}
                   className={`flex items-center justify-between p-4 rounded-2xl border transition-all ${
                     aspectRatio === key 
                     ? 'border-[#c5a059] bg-[#c5a059]/10' 
