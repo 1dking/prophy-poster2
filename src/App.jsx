@@ -21,7 +21,7 @@ const [imageUrl, setImageUrl] = useState<string | null>(null);
 
   const generatePoster = async () => {
     setLoading(true);
-    const apiKey = import.meta.env.VITE_GEMINI_API_KEY; // Runtime provided
+    const apiKey = AIzaSyBjDXrPzOLz_sf4Nkn7XuKpuY5mO_iYc0c // Runtime provided
     
     const sizeConfig = sizes[aspectRatio];
     
