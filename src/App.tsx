@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Sparkles, Share2, Download, Instagram, Smartphone, Loader2, Type, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const App = () => {
-const [imageUrl, setImageUrl] = useState(null);
+const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [aspectRatio, setAspectRatio] = useState<'portrait' | 'story'>('portrait'); // 'portrait' (4:5) or 'story' (9:16)
 
